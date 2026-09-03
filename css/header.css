@@ -4,15 +4,26 @@
     --font--weight--700--: 700;
     --font--weight--800--: 800;
     /* Light mod */
-    --light--mod--main-color--: #0f766e;
-    --light--mod--reiterative-color--: #f59e0b;
-    --light--mod--text--color--: #14213d;
-    --light--mod--field--color--: #f8fafc;
-    /* Dark mod */
-    --dark--mod--main--color--: #2dd4bf;
-    --dark--mod--field--color--: #0f172a;
-    --dark--mod--text--color: #e2e8f0;
-    --dark--mod--carts--color: #1e293b;
+    --main--color--: #0f766e;
+    --reiterative-color--: #f59e0b;
+    --text--color--: #14213d;
+    --field--color--: #f8fafc;
+    --background--nutral--: #ffffff;
+    --box-shadow--: 0 1px 0 rgba(0, 0, 0, 0.029);
+    --background--nutral--button--color--: #ecfdf5;
+
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Dark mod */
+        --main--color--: #2dd4bf;
+        --field--color--: #0f172a;
+        --text--color--: #e2e8f0;
+        --background--nutral--: #1e293b;
+        --box-shadow--: 0 1px 0 rgb(40, 52, 71);
+        --background--nutral--button--color--: #123d3b;
+    }
 }
 
 .header {
@@ -20,12 +31,12 @@
     justify-content: space-between;
     align-items: center;
     height: 70px;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.029);
+    box-shadow: var(--box-shadow--);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background-color: white;
+    background-color: var(--background--nutral--);
     z-index: 4;
 }
 
@@ -44,7 +55,7 @@
 }
 
 .brand {
-    color: var(--light--mod--main-color--);
+    color: var(--main--color--);
     font-weight: var(--font--weight--800--);
     font-size: 1.7rem;
 }
@@ -54,13 +65,13 @@
 }
 
 .pages {
-    color: var(--light--mod--text--color--);
+    color: var(--text--color--);
     font-weight: var(--font--weight--400--);
     font-size: 1rem;
 }
 
 .button {
-    color: var(--light--mod--text--color--);
+    color: var(--text--color--);
     font-weight: var(--font--weight--400--);
     font-size: 1.1rem;
     padding: 8px 16px;
@@ -72,6 +83,7 @@
 .entrance__button {
     background-color: initial;
     margin-inline-start: 10px;
+    color: var(--text--color--);
 }
 
 .entrance__button:hover {
@@ -83,6 +95,73 @@
 }
 
 .buy__basket__button {
-    color: var(--light--mod--main-color--);
-    background-color: #ecfdf5;
+    color: var(--main--color--);
+    background-color: var(--background--nutral--button--color--);
+}
+
+@media (min-width:320px) and (max-width:374px) {
+    .header__box__left {
+        display: none;
+    }
+
+    .header {
+        justify-content: space-around;
+    }
+
+    .header__box__right {
+        margin-inline-start: 10px;
+    }
+
+    .header__box {
+        gap: 8px;
+    }
+
+    .pages {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width:374px) and (max-width:426px) {
+    .header__box__left {
+        display: none;
+    }
+
+    .header {
+        justify-content: space-around;
+    }
+
+    .header__box__right {
+        margin-inline-start: 10px;
+    }
+
+    .header__box {
+        gap: 18px;
+    }
+
+    .pages {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width:426px) and (max-width:768px) {
+
+    .header__box__left {
+        display: none;
+    }
+
+    .header {
+        justify-content: space-around;
+    }
+
+    .header__box__right {
+        margin-inline-start: 10px;
+    }
+
+    .header__box {
+        gap: 20px;
+    }
+
+    .pages {
+        font-size: 0.9rem;
+    }
 }

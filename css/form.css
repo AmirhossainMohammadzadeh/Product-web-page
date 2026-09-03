@@ -4,15 +4,34 @@
     --font--weight--700--: 700;
     --font--weight--800--: 800;
     /* Light mod */
-    --light--mod--main-color--: #0f766e;
-    --light--mod--reiterative-color--: #f59e0b;
-    --light--mod--text--color--: #14213d;
-    --light--mod--field--color--: #f8fafc;
-    /* Dark mod */
-    --dark--mod--main--color--: #2dd4bf;
-    --dark--mod--field--color--: #0f172a;
-    --dark--mod--text--color: #e2e8f0;
-    --dark--mod--carts--color: #1e293b;
+    --main-color--: #0f766e;
+    --reiterative-color--: #f59e0b;
+    --text--color--: #14213d;
+    --background--color--: #f8fafc;
+    --background--color--body--: #ffffff;
+    --border--color--inputs--: #cfd8e3;
+    --second--text--color--: #808080;
+    --outline--color--: #ecfdf5;
+    --focus--border--color--: #0f766e;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Dark mod */
+        --main--color--: #2dd4bf;
+        --background--color--body--: #0f172a;
+        --text--color--: #e2e8f0;
+        --background--color--: #1e293b;
+        --border--color--: #2a374a;
+        --border--color--inputs--: #475569;
+        --second--text--color--: #ffffffd6;
+        --outline--color--: #2dd4bf;
+        --focus--border--color--: #0f766e;
+    }
+}
+
+body {
+    background-color: var(--background--color--body--);
 }
 
 .form {
@@ -24,22 +43,25 @@
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 0 10px #00000011;
+    background-color: var(--background--color--);
+    border: 1px solid var(--border--color--);
 }
 
 .text {
     text-align: center;
+    color: var(--text--color--);
 }
 
 .title {
     margin-block: 20px;
     font-weight: var(--font--weight--800--);
-    color: var(--light--mod--text--color--);
+    color: var(--text--color--);
 }
 
 .explanation {
     margin-bottom: 40px;
     font-weight: var(--font--weight--400--);
-    color: #808080;
+    color: var(--second--text--color--);
 }
 
 .input__holder {
@@ -50,17 +72,18 @@
 .input {
     padding: 12px;
     border-radius: 10px;
-    border: 1px solid #cfd8e3;
+    border: 1px solid var(--border--color--inputs--);
     margin-block-start: 10px;
     direction: ltr;
     background-color: initial;
+    color: var(--text--color--);
 }
 
 input:is([type="password"],
     [type="number"],
     [type="email"]):focus {
-    border: 1px solid var(--light--mod--main-color--);
-    outline: 5px solid #d3e6e5;
+    border: 1px solid var(--focus--border--color--);
+    outline: 5px solid var(--outline--color--);
 }
 
 input:is([type="password"],
@@ -80,6 +103,7 @@ label {
     margin-block-start: 20px;
     font-weight: var(--font--weight--600--);
     font-size: 0.9rem;
+    color: var(--text--color--);
 }
 
 .button__holder {
@@ -99,13 +123,13 @@ label {
     padding-block: 15px;
     border: none;
     color: white;
-    background-color: var(--light--mod--main-color--);
+    background-color: var(--main--color--);
 }
 
 .reset__button {
     padding-block: 15px;
-    color: var(--light--mod--main-color--);
-    border: 1px solid var(--light--mod--main-color--);
+    color: var(--main--color--);
+    border: 1px solid var(--main--color--);
     background-color: initial;
 }
 
@@ -127,42 +151,12 @@ label {
     }
 }
 
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: var(--dark--mod--field--color--);
+@media (min-height:639px) and (max-height:721px) {
+    .title {
+        margin-block: 5px;
     }
 
-    .form {
-        background-color: #1e293b;
-        border: 1px solid #2a374a;
-    }
-
-    .input {
-        border-color: #475569;
-        color: white;
-    }
-
-    label {
-        color: white;
-    }
-
-    .text {
-        color: white;
-    }
-    .explanation{
-        color: #ffffffd6;
-    }
-
-    input:is([type="password"],
-        [type="number"],
-        [type="email"]):focus {
-        outline: 5px solid var(--dark--mod--main--color--);
-    }
-    .register__button{
-        background-color: var(--dark--mod--main--color--);
-    }
-    .reset__button{
-        border-color: var(--dark--mod--main--color--);
-        color: var(--dark--mod--main--color--);
+    .explanation {
+        margin-bottom: 20px;
     }
 }
