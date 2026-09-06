@@ -2,6 +2,12 @@
      --footer--background--color--: #1e293b;
  }
 
+ @media (prefers-color-scheme: dark) {
+     :root {
+         --footer--background--color--: #020617;
+     }
+ }
+
  .footer {
      height: 70px;
      position: fixed;
@@ -20,11 +26,13 @@
  .footer__nav__pages {
      color: white;
  }
- .footer__pages{
-    display: flex;
+
+ .footer__pages {
+     display: flex;
  }
+
  @media (min-width:0) and (max-width:441px) {
-    .footer{
-        font-size: 0.6rem;
-    }
+     .footer {
+         font-size: 0.6rem;
+     }
  }

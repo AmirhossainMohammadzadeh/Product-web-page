@@ -28,6 +28,14 @@
         --outline--color--: #2dd4bf;
         --focus--border--color--: #0f766e;
     }
+
+    .footer {
+        display: none;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -80,20 +88,20 @@ body {
 }
 
 input:is([type="password"],
-    [type="number"],
+    [type="text"],
     [type="email"]):focus {
     border: 1px solid var(--focus--border--color--);
     outline: 5px solid var(--outline--color--);
 }
 
 input:is([type="password"],
-    [type="number"],
+    [type="text"],
     [type="email"]):user-valid {
     border: 1px solid #5ebf81;
 }
 
 input:is([type="password"],
-    [type="number"],
+    [type="text"],
     [type="email"]):user-invalid {
     border: 1px solid #e35b5b;
 }

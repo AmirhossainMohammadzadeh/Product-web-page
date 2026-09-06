@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/Vazirmatn-Variable-font-face.css">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/header_dark_mod.css">
-    <link rel="stylesheet" href="./css/header_responsive.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/form.css">
@@ -39,7 +37,7 @@
             <label for="email_input">ایمیل</label>
             <input type="email" name="email" id="email_input" class="input" placeholder="name@example.com" required>
             <label for="phone_number_input">شماره همراه</label>
-            <input type="number" name="phone_number" id="phone_number_input" class="input" placeholder="09123456789" required>
+            <input type="text" pattern="[0-9]*" inputmode="numeric" name="phone_number" id="phone_number_input" class="input" placeholder="09123456789" required>
             <label for="password_input">رمزعبور</label>
             <input type="password" name="password" id="password_input" class="input" minlength="8" placeholder="حداقل ۸ کاراکتر" required>
             <label for="passeord_repitition_input">تکرار رمزعبور</label>
