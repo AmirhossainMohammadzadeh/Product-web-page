@@ -17,9 +17,11 @@
     --background--color--serach--bar--: #ffffff;
     --background--color--: #ffffff;
     --discount--background--color--: #ecfef5;
-    --discount--text--color--: #123d3b;
+    --discount--text--color--: #137068;
     --focus--border--color--: #0f766e;
     --outline--color--: #ecfdf5;
+    --button--filter--border--color--: #959595;
+    --button--filter--background--color--: #ffffff;
 
 }
 
@@ -43,6 +45,8 @@
         --discount--background--color--: #123d3b;
         --discount--text--color--: #2dd4bf;
         --focus--border--color--: #0f766e;
+        --button--filter--border--color--: #2a374a;
+        --button--filter--background--color--: #1e293b;
     }
 }
 
@@ -55,8 +59,8 @@ html {
 }
 
 body {
-    padding-inline-start: 60px;
-    padding-inline-end: 50px;
+    padding-inline-start: 80px;
+    padding-inline-end: 90px;
     background-color: var(--background--color--body--);
     height: fit-content;
 }
@@ -218,7 +222,7 @@ body {
     height: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 16px;
     justify-items: center;
     align-content: center;
     margin-top: -10px;
@@ -268,6 +272,7 @@ body {
     position: relative;
     right: 25px;
     top: 10px;
+    font-weight: var(--font--weight--600--);
 }
 
 .a__for__articles {
@@ -283,6 +288,39 @@ body {
     margin-inline: 10px;
 }
 
+i {
+    font-style: normal;
+}
+
+.filter__button {
+    padding: 14px;
+    border: 3px solid var(--button--filter--border--color--);
+    background-color: var(--button--filter--background--color--);
+    border-radius: 18px;
+    color: var(--text--color--);
+    font-weight: var(--font--weight--700--);
+    position: fixed;
+    font-size: 1.5rem;
+    right: 10px;
+    bottom: 80px;
+    cursor: pointer;
+    display: none;
+}
+
+.filter__checkbox:checked~.close__icon {
+    display: block;
+}
+
+.filter__checkbox:checked~.open__icon {
+    display: none;
+}
+
+.close__icon {
+    display: none;
+    width: 33px;
+    text-align: center;
+}
+
 input:is([type="search"]):focus {
     border: 1px solid var(--focus--border--color--);
     outline: 5px solid var(--outline--color--);
@@ -291,6 +329,22 @@ input:is([type="search"]):focus {
 @media (min-width:0) and (max-width:768px) {
     .filter {
         display: none;
+        position: fixed;
+        top: 73px;
+        left: 0;
+        z-index: 10;
+        margin: 0;
+        overflow-y: auto;
+    }
+
+    .filter__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    body:has(.filter__checkbox:checked) .filter {
+        display: inline;
     }
 }
 

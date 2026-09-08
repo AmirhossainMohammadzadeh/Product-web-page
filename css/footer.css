@@ -36,3 +36,8 @@
          font-size: 0.6rem;
      }
  }
+  @media (min-width:441px) and (max-width:449px) {
+     .footer {
+         font-size: 0.8rem;
+     }
+ }

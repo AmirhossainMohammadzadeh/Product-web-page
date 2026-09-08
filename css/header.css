@@ -144,7 +144,6 @@
 }
 
 @media (min-width:426px) and (max-width:768px) {
-
     .header__box__left {
         display: none;
     }
