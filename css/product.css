@@ -221,6 +221,15 @@ i {
     margin-inline-start: 10px;
     cursor: pointer;
     margin-top: 10px;
+    transition: opacity 200ms;
+}
+
+.buy__button:hover {
+    opacity: 0.7;
+}
+
+.buy__button:active {
+    opacity: 0.5;
 }
 
 .dot {
@@ -310,9 +319,11 @@ main {
         justify-content: center;
         align-items: center;
     }
-.picture__box{
-    margin-inline-end: 25px;
-}
+
+    .picture__box {
+        margin-inline-end: 25px;
+    }
+
     .small__pic {
         max-width: 80px;
     }
