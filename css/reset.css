@@ -10,7 +10,7 @@ a{
 html{
 	font-size: 16px;
 }
-p,span,i,h1,h2,h3,aside{
+p,i,h1,h2,h3,aside{
 	cursor:default;
 }
 html, body, div, span, applet, object, iframe,
