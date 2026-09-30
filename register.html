@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
@@ -28,6 +28,9 @@
         </div>
         <div class="header__box header__box__left">
             <button class="button buy__basket__button">سبد خرید · <span>۲</span></button>
+            <a href="./register.html">
+                <button class="button entrance__button">ورود</button>
+            </a>
         </div>
     </header>
     <form action="#" method="post" class="form">
@@ -37,15 +40,18 @@
             <label for="email_input">ایمیل</label>
             <input type="email" name="email" id="email_input" class="input" placeholder="name@example.com" required>
             <label for="phone_number_input">شماره همراه</label>
-            <input type="text" pattern="[0-9]*" inputmode="numeric" name="phone_number" id="phone_number_input" class="input" placeholder="09123456789" required>
+            <input type="text" pattern="[0-9]*" inputmode="numeric" name="phone_number" id="phone_number_input"
+                class="input" placeholder="09123456789" required>
             <label for="password_input">رمزعبور</label>
-            <input type="password" name="password" id="password_input" class="input" minlength="8" placeholder="حداقل ۸ کاراکتر" required>
+            <input type="password" name="password" id="password_input" class="input" minlength="8" maxlength="64"
+                placeholder="حداقل ۸ کاراکتر" required>
             <label for="passeord_repitition_input">تکرار رمزعبور</label>
-            <input type="password" name="passeord_repitition" id="passeord_repitition_input" class="input" minlength="8" placeholder="رمزعبور را دوباره وارد کنید" required>
+            <input type="password" name="passeord_repitition" id="passeord_repitition_input" class="input" minlength="8"
+                maxlength="64" placeholder="رمزعبور را دوباره وارد کنید" required>
         </div>
         <div class="button__holder">
             <button type="reset" class="button form__button reset__button">پاک کردن</button>
-            <button class="button form__button register__button">ثبت‌نام</button>
+            <button type="submit" class="button form__button register__button">ثبت‌نام</button>
         </div>
     </form>
     <footer class="footer">
@@ -59,4 +65,5 @@
         <div>© ۱۴۰۵</div>
     </footer>
 </body>
+
 </html>
